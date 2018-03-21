@@ -35,7 +35,7 @@ echo Vault unlocked successfully.
 goto END
 :MKD
 md "Unlocked Vault"
-echo New vault created successfully.
+echo Vault created successfully.
 goto END
 :END
 TIMEOUT /T 3
