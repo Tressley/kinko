@@ -1,5 +1,5 @@
 # Kinko
-A basic Windows batch script to password "protect" and hide a directory.
+A basic Windows batch file to password "protect" and hide a directory.
 
 ## Using Kinko
 ### Changing the Password
