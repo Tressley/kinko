@@ -7,6 +7,7 @@ title Kinko
 ::: |   <| | | | |   < (_) |
 ::: |_|\_\_|_| |_|_|\_\___/
 ::: 
+REM Tressley Cahill 2018
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 if EXIST "Kinko.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
 if NOT EXIST "Unlocked Vault" goto MKVAULT
