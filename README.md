@@ -1,11 +1,11 @@
 # Kinko
-A basic Windows batch file to password "protect" and hide a directory.
+A ~1kb Windows batch file to password "protect" and hide a directory.
 
 ## Using Kinko
 ### Getting Started
-1. First follow the steps outlined in [Changing the Password](https://github.com/Tressley/kinko#changing-the-password).
+1. Before running **kinko.bat**, first follow the steps outlined below in [Changing the Password](https://github.com/Tressley/kinko#changing-the-password).
 1. After you've updated the password, run **kinko.bat** for the first time to create a new vault.
-1. Place your files in the newly created "Unlocked Vault" directory.
+1. Place sensitive files in the newly created "Unlocked Vault" directory.
 1. Run **kinko.bat** again to [lock the vault](https://github.com/Tressley/kinko#locking-the-vault).
 
 #### Changing the Password
@@ -18,4 +18,4 @@ A basic Windows batch file to password "protect" and hide a directory.
 1. Press Y to lock your vault.
 
 #### Unlocking the Vault
-1. Run **kinko.bat**, you will be prompted to enter your password.
+1. Run **kinko.bat** to prompt the password screen.

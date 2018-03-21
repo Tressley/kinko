@@ -1,39 +1,39 @@
 cls
 @ECHO OFF
 title Kinko
+color 0C
 :::  _    _       _
 ::: | | _(_)_ __ | | _____
 ::: | |/ / | '_ \| |/ / _ \
 ::: |   <| | | | |   < (_) |
 ::: |_|\_\_|_| |_|_|\_\___/
-::: 
-REM Tressley Cahill 2018
+:::
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 if EXIST "Kinko.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
-if NOT EXIST "Unlocked Vault" goto MKVAULT
-:CONFIRM
-echo Are you sure you want to lock the vault? (Y/N)
-set/p "cho=>"
-if %cho%==Y goto LOCK
-if %cho%==y goto LOCK
-if %cho%==N goto END
-if %cho%==n goto END
-echo Invalid selection.
-goto CONFIRM
+if NOT EXIST "Unlocked Vault" goto MKD
+:MENU
+echo Lock vault? (Y/N)
+set/p "ch=>"
+if %ch%==Y goto LOCK
+if %ch%==y goto LOCK
+if %ch%==N goto END
+if %ch%==n goto END
+echo Selection error.
+goto MENU
 :LOCK
 ren "Unlocked Vault" "Kinko.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
 attrib +h +s "Kinko.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
 echo Vault locked.
 goto END
 :UNLOCK
-echo Enter password:
+echo Password:
 set/p "kagi=>"
-if NOT %kagi%==YOUR_KEY_HERE goto END
+if NOT %kagi%==YOUR_KEY goto END
 attrib -h -s "Kinko.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
 ren "Kinko.{21EC2020-3AEA-1069-A2DD-08002B30309D}" "Unlocked Vault"
 echo Vault unlocked successfully.
 goto END
-:MKVAULT
+:MKD
 md "Unlocked Vault"
 echo New vault created successfully.
 goto END
